@@ -1,0 +1,11 @@
+.container {
+  margin-top: 200 px;
+}
+
+.d-lg-flex {
+  display: flex !important;
+}
+
+.justify-content-around {
+  justify-content: space-around !important;
+}

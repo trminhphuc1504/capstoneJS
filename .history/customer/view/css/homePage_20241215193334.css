@@ -1,0 +1,57 @@
+.container {
+  margin-top: 200 px;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.homeEffect {
+  /* opacity: 95%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  width: 250px;
+  height: 250px;
+  background: rgb(211, 215, 216);
+  border-radius: 75px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+}
+
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 0.25rem; /* defines the space between text and underline */
+  position: relative;
+}
+
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #f3ce5e;
+  transition: width 0.25s ease-out;
+}
+
+h1 {
+  color: rgb(204, 204, 204);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
