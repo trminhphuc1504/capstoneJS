@@ -1,0 +1,39 @@
+// _buttons.scss (tạo một tệp SASS riêng cho các nút)
+$btn-primary-color: #007bff;
+$btn-danger-color: #dc3545;
+$btn-padding: 10px 20px;
+$btn-border-radius: 5px;
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem; // tương đương với mt-3 trong Bootstrap
+
+  .btn {
+    padding: $btn-padding;
+    border-radius: $btn-border-radius;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &.btn-outline-primary {
+      border: 2px solid $btn-primary-color;
+      color: $btn-primary-color;
+      background: transparent;
+      &:hover {
+        background-color: $btn-primary-color;
+        color: white;
+      }
+    }
+
+    &.btn-outline-danger {
+      border: 2px solid $btn-danger-color;
+      color: $btn-danger-color;
+      background: transparent;
+      &:hover {
+        background-color: $btn-danger-color;
+        color: white;
+      }
+    }
+  }
+}

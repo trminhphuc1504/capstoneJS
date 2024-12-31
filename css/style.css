@@ -1,0 +1,11 @@
+.product-container {
+  display: flex;
+}
+.product-container .item {
+  padding: 5px;
+  border: 1px solid black;
+}
+.product-container .item img {
+  width: 150px;
+  height: 150px;
+}/*# sourceMappingURL=style.css.map */
