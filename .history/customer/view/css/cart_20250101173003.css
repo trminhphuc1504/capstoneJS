@@ -1,0 +1,9 @@
+.cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    padding:10px
+    border-radius:50%;
+    
+}

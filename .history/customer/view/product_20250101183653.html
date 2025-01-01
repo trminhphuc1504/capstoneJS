@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sản Phẩm</title>
+        <link rel="stylesheet" href="/asset/scss/style.css" />
+        <link rel="stylesheet" href="./css/cart.css" />
+        <link rel="stylesheet" href="./css/dropDown.css" />
+        <!-- Font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <a href="cart.html" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+        <div class="main-container">
+            <div class="filter-container">
+                <label for="product-filter">Lọc sản phẩm theo loại:</label>
+                <select id="product-filter" onchange="handleFilterChange()">
+                    <option value="all">Tất cả</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="Iphone">iPhone</option>
+                </select>
+            </div>
+
+        <div class="product-container">
+            <!-- Các sản phẩm sẽ được hiển thị ở đây -->
+        </div>
+
+        <div id="product-details" style="display: none">
+            <!-- Chi tiết sản phẩm sẽ được hiển thị ở đây -->
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script type="module" src="../controller/main.js"></script>
+    </body>
+</html>

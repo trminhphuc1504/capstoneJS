@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sản Phẩm</title>
+        <link rel="stylesheet" href="/asset/scss/style.css" />
+    </head>
+    <body>
+        <a href="cart.html" class="cart-icon">
+            <img
+                src="https://img.icons8.com/ios-filled/50/ffffff/shopping-cart.png"
+                alt="Cart"
+            />
+        </a>
+
+        <div class="product-container">
+            <!-- Các sản phẩm sẽ được hiển thị ở đây -->
+        </div>
+
+        <div id="product-details" style="display: none">
+            <!-- Chi tiết sản phẩm sẽ được hiển thị ở đây -->
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script type="module" src="../controller/main.js"></script>
+    </body>
+</html>

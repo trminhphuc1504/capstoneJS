@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Giỏ Hàng</title>
+        <link rel="stylesheet" href="/asset/scss/style.css" />
+        <!-- Font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <div class="cart-container">
+            <h1>Giỏ Hàng</h1>
+            <a href="product.html" class="back-button">
+                <i class="fa-solid fa-backward"></i> Quay lại trang sản phẩm
+            </a>
+
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Sản Phẩm</th>
+                        <th>Số Lượng</th>
+                        <th>Giá Tiền</th>
+                        <th>Tổng Tiền</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Các sản phẩm trong giỏ hàng sẽ được hiển thị ở đây -->
+                </tbody>
+            </table>
+            <div class="total-container">
+                <h2>Tổng Tiền: <span id="total-price">0</span> VND</h2>
+            </div>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script type="module" src="../controller/cart.js"></script>
+    </body>
+</html>

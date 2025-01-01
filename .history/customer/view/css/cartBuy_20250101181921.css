@@ -1,0 +1,7 @@
+.checkout-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #28a745;
+    color: white;
+}
