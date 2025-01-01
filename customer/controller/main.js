@@ -7,13 +7,17 @@ const renderProducts = (arr) => {
     let htmlContent = '';
     arr.forEach((item) => {
         htmlContent += `
-        <div class="item">
-            <img src="${item.img}" alt="${item.name}">
-            <p>${item.name}</p>
-            <p>Giá: ${item.price} VND</p>
-            <div class="button-container">
-                <button onclick="showDetails('${item.id}')">Xem Chi Tiết</button>
-                <button onclick="addToCart('${item.id}')">Thêm vào giỏ hàng</button>
+        <div class="card">
+            <div class="imgBox">
+                <img src="${item.img}" alt="${item.name}" class="mouse">
+            </div>
+
+            <div class="contentBox">
+                <h3>${item.name}</h3>
+                <h2 class="price">${item.price} VNĐ</h2>
+                <div class="button-container">
+                    <a href="detail.html?id=${item.id}" class="buy">Xem Chi Tiết</a>
+                </div>
             </div>
         </div>
         `;
@@ -29,44 +33,6 @@ const getProducts = async () => {
         renderProducts(products);
     } catch (err) {
         console.log("err:", err);
-    }
-};
-
-window.showDetails = (productId) => {
-    const product = products.find(item => item.id === productId);
-    if (product) {
-        const detailContent = `
-            <h2>${product.name}</h2>
-            <p>Giá: ${product.price} VND</p>
-            <p>Màn hình: ${product.screen}</p>
-            <p>Camera sau: ${product.backCamera}</p>
-            <p>Camera trước: ${product.frontCamera}</p>
-            <img src="${product.img}" alt="${product.name}">
-            <p>Mô tả: ${product.desc}</p>
-            <p>Loại: ${product.type}</p>
-        `;
-        const productDetailsElement = document.querySelector('.product-details');
-        if (productDetailsElement) {
-            productDetailsElement.innerHTML = detailContent;
-            productDetailsElement.style.display = 'block';
-        } else {
-            console.error('Element with class "product-details" not found.');
-        }
-    }
-};
-
-window.addToCart = (productId) => {
-    const product = products.find(item => item.id === productId);
-    if (product) {
-        const cartItem = cart.find(item => item.id === productId);
-        if (cartItem) {
-            cartItem.quantity += 1;
-        } else {
-            cart.push({ ...product, quantity: 1 });
-        }
-        localStorage.setItem('cart', JSON.stringify(cart));
-        console.log("Cart: ", cart);
-        alert(`${product.name} has been added to the cart.`);
     }
 };
 
